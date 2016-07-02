@@ -1,0 +1,42 @@
+
+'use strict';
+
+(function(){
+   function arraylist() {
+
+   		this.collection=[];
+   }
+   arraylist.prototype={
+   		add:function(val){
+   			return this.collection.push(val);
+   		},
+
+   		remove:function(val){
+   			return this.collection.pop(val);
+   		},
+
+   		getIndexFirst:function(val){
+   			return this.collection.indexOf(val);
+   		},
+
+   		getIndexLast:function(val){
+   			return this.collection.lastIndexOf(val);
+   		},
+
+   		search:function(val){
+   			var n;
+   			var mystring = this.collection.toString(); 
+   			val = val.toString();
+   			return n = mystring.search(val);
+   		},
+
+   		sort:function(val){
+   			return this.collection.sort(function(a,b){return a-b;});
+   		},
+   }
+
+})();
+
+
+
+
